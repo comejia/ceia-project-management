@@ -5,7 +5,7 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Sistema de Recomendación de contenidos on-demand} 
+\titulo{Sistema de recomendación de contenidos \textit{on-demand}} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -16,11 +16,11 @@
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
-\autor{Ing. Mejía César Octavio}
+\autor{Ing. César Octavio Mejía}
 
 % El nombre del director y co-director, se puede usar en cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Título y Nombre del director}
-\pertenenciaDirector{pertenencia} 
+\director{A definir}
+\pertenenciaDirector{pertenencia}
 \codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
 \pertenenciaCoDirector{FIUBA}
 
@@ -30,7 +30,7 @@
  
 \fechaINICIO{26 de agosto de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{14 de octubre de 2025} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2025}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{15 de junio de 2025}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{red}{la implementación de un sistema de recomendación mediante técnicas de aprendizaje por refuerzo}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{black}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red}\fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{black}{la implementación de un sistema basado en técnicas de aprendizaje por refuerzo para mejorar las recomendaciones de contenidos que recibe el usuario}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{black}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \textcolor{red}\fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -106,41 +106,24 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-El objetivo es que el lector, en una o dos páginas, exponga de qué se trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
+Los sistemas de recomendación constituyen un componente esencial en plataformas que ofrecen contenidos, dado que permiten personalizar la interacción con los usuarios para lograr la retención de los mismos. Su función principal es filtrar, ordenar y priorizar información de manera personalizada en entornos donde la abundancia de opciones representa un desafío significativo. Sin embargo, la mayoría de las técnicas tradicionales utilizadas, como el filtrado colaborativo o el filtrado basado en contenido, presentan restricciones importantes frente a contextos dinámicos. Es decir, tienen difultades para adaptarse a cambios en los gustos individuales, a la aparición de nuevos intereses o a la necesidad de explorar contenidos poco frecuentes pero potencialmente relevantes.
 
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cuál es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
+El objetivo de este proyecto es desarrollar un prototipo de un sistema de recomendación basado en técnicas de aprendizaje por refuerzo (\textit{Reinforcement Learning}, RL), orientado a plataformas de distribución de contenido \textit{on-demand}. Mediante el uso de RL, el agente será capaz de adaptarse dinámicamente a las preferencias de los usuarios cuando estos interactuan con la aplicación. De este modo, la solución busca mejorar la experiencia del usuario, incrementando la satisfacción y favoreciendo su permanencia en la plataforma a largo plazo.
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
+El enfoque basado en aprendizaje por refuerzo modela el proceso de recomendación como un problema secuencial entre el sistema y el usuario: el agente observa un estado (que integra el historial del usuario, sus preferencias actuales y el contexto de consumo), selecciona una acción (el contenido a recomendar) y recibe una recompensa asociada a la reacción del usuario (visualización completa, abandono, valoración positiva, etc.). A partir de este ciclo, el agente aprende una política que busca maximizar la recompensa acumulada. Esto permite que no solo responda en base a lo conocido, sino que también pueda explorar nuevas opciones.
 
-\begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
-\end{itemize}
-
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
-
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema que consta de dos etapas. La primera se compone de un modelo de aprendizaje profundo, el cual se va a entrenar en base a la secuencia de acciones del usuario en la plataforma para encontrar patrones complejos y generar \textit{embeddings} contextuales de la información. En la segunda etapa, el agente RL integra la salida anterior como parte de su estado y decide qué acción tomar para maximizar la recompensa futura.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.65\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.65\textwidth]{./Figuras/diagrama-en-bloques-2.png}
 \caption{Diagrama en bloques del sistema.}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño del texto en TODAS las figuras debe ser adecuado \textbf{para que NO pase lo que ocurre en la figura \ref{fig:diagBloques}}, donde el lector debe esforzarse para poder leer el texto. 
-
-Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama. Se recomienda evitar colores primarios (como rojo, verde o cyan) y usar la gama de colores pastel.
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+Como clientes directos se encuentran las plataformas que ofrecen contenidos, los cuales necesitan la mayor retención de sus usuarios en el tiempo y así evitar que pasen a la competencia.
 
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
@@ -160,16 +143,16 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
+%Auspiciante   &                   &              	&        	\\ \hline
 Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
+%Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
+%Colaboradores &                   &              	&        	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+%Equipo        & miembro1 \newline 
+%				miembro2          &              	&        	\\ \hline
+%Opositores    &                   &              	&        	\\ \hline
+Usuario final & -                  &              	&        	\\ \hline
 \end{tabularx}
 \end{table}
 
@@ -195,6 +178,7 @@ Por ejemplo:
 \label{sec:proposito}
 
 \begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
+El propósito de este proyecto es desarrollar un sistema de recomendación, basado en aprendizaje por refuerzo, que permita mejorar la experiencia de los usuarios al interactuar con contenidos acorde a sus preferencias.
 
 ¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
 
