@@ -108,11 +108,11 @@ Se adjunta a esta acta la planificación inicial.
 
 Los sistemas de recomendación constituyen un componente esencial en plataformas que ofrecen contenidos, dado que permiten personalizar la interacción con los usuarios para mejorar la retención de los mismos. Su función principal es filtrar, ordenar y priorizar información en entornos donde la abundancia de opciones representa un desafío significativo. Sin embargo, la mayoría de las técnicas utilizadas, como el filtrado colaborativo o el filtrado basado en contenido, presentan limitaciones frente a contextos dinámicos. Por ejemplo, tienen dificultades para adaptarse a cambios en los gustos individuales, a la aparición de nuevos intereses o a la necesidad de explorar contenidos poco frecuentes pero potencialmente relevantes.
 
-El objetivo de este proyecto es desarrollar un prototipo de un sistema de recomendación basado en técnicas de aprendizaje por refuerzo (\textit{Reinforcement Learning}, RL), orientado a plataformas de distribución de contenido \textit{on-demand}. Mediante el uso de RL, el sistema será capaz de adaptarse dinámicamente a las preferencias de los usuarios cuando interactúan con la aplicación. De este modo, la solución busca mejorar la experiencia del usuario, incrementando la satisfacción y favoreciendo su permanencia en la plataforma a largo plazo.
+El objetivo de este proyecto es desarrollar un prototipo de un sistema de recomendación basado en técnicas de aprendizaje por refuerzo (\textit{Reinforcement Learning}, RL), orientado a plataformas de distribución de contenido \textit{on-demand}. Mediante el uso de RL, el sistema será capaz de adaptarse dinámicamente a las preferencias de los usuarios cuando interactúan con la aplicación. De este modo, la solución busca mejorar la experiencia del usuario, lo que incrementaría la satisfacción y favorecería su permanencia en la plataforma a largo plazo.
 
-En este contexto, el enfoque basado en aprendizaje por refuerzo modela el proceso de recomendación como un problema secuencial entre el sistema y el usuario: el agente observa un estado (que integra el historial del usuario, sus preferencias actuales y el contexto de consumo), selecciona una acción (el contenido a recomendar) y recibe una recompensa asociada a la reacción del usuario (visualización completa, abandono, valoración positiva, etc.). A partir de este ciclo, el agente aprende una política que busca maximizar la recompensa acumulada, permitiendo que no solo responda en base a lo conocido, sino que también explore nuevas opciones.
+En este contexto, el enfoque basado en aprendizaje por refuerzo modela el proceso de recomendación como un problema secuencial entre el sistema y el usuario: el agente observa un estado (que integra el historial del usuario, sus preferencias actuales y el contexto de consumo), selecciona una acción (el contenido a recomendar) y recibe una recompensa asociada a la reacción del usuario (visualización completa, abandono, valoración positiva, etc.). A partir de este ciclo, el agente aprende una política que busca maximizar la recompensa acumulada, lo que permite que no solo responda en base a lo conocido, sino que también explore nuevas opciones.
 
-En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema que consta de dos etapas. La primera se compone de un modelo de aprendizaje profundo, el cual se va a entrenar en base al historial de acciones del usuario para encontrar patrones complejos y generar \textit{embeddings} contextuales de la información. En la segunda etapa, el agente de RL incorpora la salida anterior como parte de la representación de su estado y, mediante simulaciones del entorno, selecciona la acción que maximiza la recompensa futura.
+En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema que consta de dos etapas. La primera se compone de un modelo de aprendizaje profundo, que se entrenará en base al historial de acciones del usuario para encontrar patrones complejos y generar \textit{embeddings} contextuales de la información. En la segunda etapa, el agente de RL incorpora la salida anterior como parte de la representación de su estado y, mediante simulaciones del entorno, selecciona la acción que maximiza la recompensa futura.
 
 \begin{figure}[htpb]
 \centering 
@@ -125,10 +125,10 @@ En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistem
 
 Como ejemplo de recompensas, se define lo siguiente:
 \begin{itemize}
-	\item Clic en contenido recomendado: $+0.5$
-	\item Reproducir el contenido completo (más del 80\%): $+1.0$
-	\item Detener la reproducción del contenido (menor al 10\%): $-1.0$
-	\item Abandonar la plataforma luego de una recomendación: $-3.0$
+	\item Clic en contenido recomendado: $+0.5$.
+	\item Reproducir el contenido completo (más del 80\%): $+1.0$.
+	\item Detener la reproducción del contenido (menor al 10\%): $-1.0$.
+	\item Abandonar la plataforma luego de una recomendación: $-3.0$.
 \end{itemize}
 
 Estos valores serán utilizados por el agente para ajustar su política de aprendizaje a partir de las interacciones.
@@ -159,6 +159,13 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 \end{table}
 
 
+\begin{itemize}
+	\item Orientador: su experiencia en la temática será fundamental para definir los modelos y técnicas a implementar.
+	\item Responsable: es el principal interesado en el desarrollo del sistema.
+	\item Cliente: validará el cumplimiento de cada etapa del proyecto.
+\end{itemize}
+
+
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
@@ -169,8 +176,8 @@ El propósito de este proyecto es desarrollar un sistema de recomendación basad
 
 El proyecto incluye:
 \begin{itemize}
-	\item Recolección y procesamiento de \textit{dataset} públicos para generar el histórico de los usuarios.
-	\item Desarrollo de los modelos.
+	\item Recolección y procesamiento de \textit{datasets} públicos para generar el histórico de los usuarios.
+	\item Desarrollo de los modelos:
 		\begin{itemize}
 		\item Selección y entrenamiento del modelo secuencial en base a técnicas de aprendizaje profundo.
 		\item Definición del estado, política y recompensas del agente de aprendizaje por refuerzo.
@@ -196,10 +203,9 @@ Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
 	\item Se cuenta con datos públicos suficientes para entrenar y validar el sistema.
-	\item Se dispone de la infraestructura necesaria para llevar a cabo el proyecto. 
-	\item De ser necesario, se evaluará el uso de recursos en la nube.
+	\item Se dispone de la infraestructura necesaria para llevar a cabo el proyecto.
+	\item Se realizarán comparaciones con otros modelos para identificar las ventajas y limitaciones de la solución.
 	\item El responsable dedicará el tiempo suficiente para cumplir con la planificación establecida.
-	\item Se utilizará herramientas \textit{open source}
 \end{itemize}
 
 
