@@ -60,7 +60,7 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                & {9} de {septiembre} de 2025 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
+2      & Se completa hasta el punto 9 inclusive                & {16} de {septiembre} de 2025 \\ \hline
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -162,7 +162,7 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 \begin{itemize}
 	\item Orientador: su experiencia en la temática será fundamental para definir los modelos y técnicas a implementar.
 	\item Responsable: es el principal interesado en el desarrollo del sistema.
-	\item Cliente: validará el cumplimiento de cada etapa del proyecto.
+	\item Cliente: validará el cumplimiento en cada etapa del proyecto.
 \end{itemize}
 
 
@@ -170,6 +170,7 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 \label{sec:proposito}
 
 El propósito de este proyecto es desarrollar un sistema de recomendación basado en aprendizaje por refuerzo, que permita mejorar la experiencia de los usuarios al interactuar con contenido acorde a sus preferencias.
+La solución propuesta es un emprendimiento personal y tiene como objetivo, potenciales clientes, empresas que buscan la retención de los usuarios en su plataforma a largo plazo.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
@@ -212,110 +213,137 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item El sistema debe ser capaz de recomendar contenido personalizado al usuario (prioridad alta).
+			\item El modelo secuencial debe procesar el \textit{dataset} de entrada y generar los \textit{embeddings} (prioridad alta).
+			\item El modelo de aprendizaje por refuerzo debe utilizar los \textit{embeddings} y actualizar su política de recomendación en función de las recompensas obtenidas (prioridad alta).
+			\item El sistema debe trabajar en conjunto con los modelos desarrollados (prioridad alta).
+			\item El sistema debe disponer de gráficos que facilite visualizar el desempeño (prioridad media).
 		\end{enumerate}
 	\item Requerimientos de documentación:
 		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
+			\item Se debe incluir el informe de avance y la memoria del trabajo final (prioridad alta).
+			\item El código fuente debe estar debidamente documentado (prioridad media).
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\item Requerimiento de \textit{testing}:
+		\begin{enumerate}
+			\item Se debe utilizar conjuntos diferentes para el entrenamiento y evaluación del sistema (prioridad alta).
+			\item Se debe comparar los resultados contra métodos tradicionales (prioridad media).
+		\end{enumerate}
 \end{enumerate}
 
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Para estimar los puntos de las historias de usuarios, se utilizan los siguientes criterios y pesos de ponderación:
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
+\begin{itemize}
+	\item Dificultad:
+		\begin{itemize}
+			\item Baja: 1.
+			\item Medio: 3.
+			\item Alta: 5.
+		\end{itemize}
+	\item Complejidad:
+		\begin{itemize}
+			\item Baja: 2.
+			\item Medio: 5.
+			\item Alta: 8.
+		\end{itemize}
+	\item Incertidumbre:
+		\begin{itemize}
+			\item Baja: 1.
+			\item Medio: 3.
+			\item Alta: 5.
+		\end{itemize}
+\end{itemize}
 
-El formato propuesto es: 
 \begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
+\item ``Como usuario quiero obtener recomendaciones para seleccionar algún contenido."
 
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+\textit{Story points}: 21 (complejidad: 8, dificultad: 5, incertidumbre: 5)
+
+\item ``Como cliente quiero visualizar los resultados con métricas y gráficos para facilitar la interpreción de los mismos."
+
+\textit{Story points}: 8 (complejidad: 2, dificultad: 3, incertidumbre: 1)
+
+\item ``Como analista de datos quiero generar el \textit{dataset} para entrenar los modelos."
+
+\textit{Story points}: 13 (complejidad: 5, dificultad: 5, incertidumbre: 3)
+
+\item ``Como investigador quiero seleccionar las técnicas adecuadas para optimizar las recomendaciones."
+
+\textit{Story points}: 8 (complejidad: 2, dificultad: 5, incertidumbre: 1)
+
+\item ``Como ingeniero quiero que el sistema sea reproducible para ejecutar en un entorno diferente al de desarrollo."
+
+\textit{Story points}: 13 (complejidad: 5, dificultad: 3, incertidumbre: 1)
 \end{enumerate}
-\end{consigna}
+
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
+Los entregables del proyecto son:
 
 \begin{itemize}
-	\item Manual de usuario.
-	\item Diagrama de circuitos esquemáticos.
-	\item Código fuente del firmware.
-	\item Diagrama de instalación.
+	\item Código fuente del sistema.
+	\item Manual de instalación y ejecución del proyecto.
+	\item Informe de avance.
 	\item Memoria del trabajo final.
-	\item etc...
 \end{itemize}
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1 (suma h)
+\item Investigación sobre la temática y modelos a implementar (100 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Estudio de sistemas de recomendación en general (20 h).
+	\item Investigar arquitecturas de aprendizaje profundo para recomendación (40 h).
+	\item Investigar técnicas de aprendizaje por refuerzo para recomendación (40 h).
 	\end{enumerate}
-\item Grupo de tareas 2 (suma h)
+\item Configuración del entorno de desarrollo (25 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Selección del lenguaje y \textit{frameworks} a utilizar (10 h).
+	\item Instalación de herramientas (15 h).
 	\end{enumerate}
-\item Grupo de tareas 3 (suma h)
+\item Procesamiento de los datos (70 h)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Recolección de datos públicos (15 h).
+	\item Análisis exploratorio de los datos (30 h).
+	\item Limpieza y preprocesamiento de los datos (20 h).
+	\item Separación de datos para entrenamiento y evaluación (5 h).
+	\end{enumerate}
+\item Desarrollo y validación de la solución (295 h)
+	\begin{enumerate}
+	\item Desarrollo de un modelo \textit{baseline} (10 h)
+	\item Definición de la arquitectura de aprendizaje profundo (AP) (20 h)
+	\item Desarrollo y entrenamiento del modelo AP (30 h).
+	\item Evaluación y optimizaciones del modelo AP (25 h).
+	\item Definición del estado, recompensas y entorno del agente por refuerzo (AR) (40 h).
+	\item Definición de la política que maximiza las recompensas del AR (15 h)
+	\item Desarrollo y entrenamiento del AR de forma aislada (40 h).
+	\item Evaluación y optimizaciones del modelo AR (35 h).
+	\item Desarrollo del \textit{pipeline} para integrar los modelos (15 h).
+	\item Evaluación del sistema completo (30 h).
+	\item Ajustes y mejoras finales (25).
+	\item Almacenamiento de los modelos entrenados (10 h).
+	\end{enumerate}
+\item Documentación (110 h)
+	\begin{enumerate}
+	\item Elaboración de informe de avance (30 h).
+	\item Elaboración de memoria del trabajo final (40 h).
+	\item Elaboración del manual de instalación y ejecución del sistema (20 h).
+	\item Documentar el código fuente (20 h).
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: tantas.
+Cantidad total de horas: 600.
 
-\textbf{¡Importante!:} la unidad de horas es h y va separada por espacio del número. Es incorrecto escribir ``23hs".
-
-\textbf{Se recomienda que no haya ninguna tarea que lleve más de 40 h.} De ser así se recomienda dividirla en tareas de menor duración.
-
-\end{consigna}
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
