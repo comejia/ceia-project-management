@@ -25,8 +25,8 @@
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Jurado}
-\empresaCliente{FIUBA}
+\cliente{Lea Chescotta}
+\empresaCliente{Telecom}
 
 \fechaINICIO{26 de agosto de 2025}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{14 de octubre de 2025} 	%Fecha de final de cursada de GdP
@@ -64,7 +64,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
+3      & Se completa hasta el punto 12 inclusive                & {23} de {septiembre} de 2025 \\ \hline
 %4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
@@ -85,7 +85,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{black}{la implementación de un sistema basado en técnicas de aprendizaje por refuerzo para mejorar las recomendaciones de contenidos que recibe el usuario}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{black}{600} horas y un costo estimado de \textcolor{red}{\$ XXX}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública en \textcolor{black}\fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en \textcolor{black}{la implementación de un sistema basado en técnicas de aprendizaje por refuerzo para mejorar las recomendaciones de contenidos que recibe el usuario}. El trabajo tendrá un presupuesto preliminar estimado de \textcolor{black}{600} horas y un costo estimado de \textcolor{black}{\$ 9.320.000}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública en \textcolor{black}\fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -146,7 +146,7 @@ A partir de esta solución, como clientes potenciales se identifican a las plata
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 %Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	& -        	\\ \hline
+Cliente       & \clientename      &\empclientename	& Líder técnico        	\\ \hline
 %Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
 %Colaboradores &                   &              	&        	\\ \hline
@@ -170,7 +170,7 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 \label{sec:proposito}
 
 El propósito de este proyecto es desarrollar un sistema de recomendación basado en aprendizaje por refuerzo, que permita mejorar la experiencia de los usuarios al interactuar con contenido acorde a sus preferencias.
-La solución propuesta es un emprendimiento personal y tiene como objetivo, potenciales clientes, empresas que buscan la retención de los usuarios en su plataforma a largo plazo.
+La solución propuesta es un emprendimiento personal y está dirigida a empresas que buscan aumentar la retención de los usuarios en su plataforma a largo plazo.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
@@ -219,17 +219,17 @@ Para el desarrollo del presente proyecto se supone que:
 			\item El modelo secuencial debe procesar el \textit{dataset} de entrada y generar los \textit{embeddings} (prioridad alta).
 			\item El modelo de aprendizaje por refuerzo debe utilizar los \textit{embeddings} y actualizar su política de recomendación en función de las recompensas obtenidas (prioridad alta).
 			\item El sistema debe trabajar en conjunto con los modelos desarrollados (prioridad alta).
-			\item El sistema debe disponer de gráficos que facilite visualizar el desempeño (prioridad media).
+			\item El sistema debe disponer de gráficos que faciliten la visualización del desempeño (prioridad media).
 		\end{enumerate}
 	\item Requerimientos de documentación:
 		\begin{enumerate}
-			\item Se debe incluir el informe de avance y la memoria del trabajo final (prioridad alta).
+			\item Se deben incluir el informe de avance y la memoria del trabajo final (prioridad alta).
 			\item El código fuente debe estar debidamente documentado (prioridad media).
 		\end{enumerate}
 	\item Requerimiento de \textit{testing}:
 		\begin{enumerate}
-			\item Se debe utilizar conjuntos diferentes para el entrenamiento y evaluación del sistema (prioridad alta).
-			\item Se debe comparar los resultados contra métodos tradicionales (prioridad media).
+			\item Se deben utilizar conjuntos diferentes para el entrenamiento y evaluación del sistema (prioridad alta).
+			\item Se deben comparar los resultados contra métodos tradicionales (prioridad media).
 		\end{enumerate}
 \end{enumerate}
 
@@ -259,6 +259,9 @@ Para estimar los puntos de las historias de usuarios, se utilizan los siguientes
 			\item Alta: 5.
 		\end{itemize}
 \end{itemize}
+
+Para determinar el valor de los \textit{story points}, se suman los tres criterios y se aproxima al número de Fibonacci superior más cercano.
+
 
 \begin{enumerate}
 \item ``Como usuario quiero obtener recomendaciones para seleccionar algún contenido."
@@ -319,17 +322,17 @@ Los entregables del proyecto son:
 	\end{enumerate}
 \item Desarrollo y validación de la solución (295 h)
 	\begin{enumerate}
-	\item Desarrollo de un modelo \textit{baseline} (10 h)
-	\item Definición de la arquitectura de aprendizaje profundo (AP) (20 h)
+	\item Desarrollo de un modelo \textit{baseline} (10 h).
+	\item Definición de la arquitectura de aprendizaje profundo (AP) (20 h).
 	\item Desarrollo y entrenamiento del modelo AP (30 h).
 	\item Evaluación y optimizaciones del modelo AP (25 h).
 	\item Definición del estado, recompensas y entorno del agente por refuerzo (AR) (40 h).
-	\item Definición de la política que maximiza las recompensas del AR (15 h)
+	\item Definición de la política que maximiza las recompensas del AR (15 h).
 	\item Desarrollo y entrenamiento del AR de forma aislada (40 h).
 	\item Evaluación y optimizaciones del modelo AR (35 h).
 	\item Desarrollo del \textit{pipeline} para integrar los modelos (15 h).
 	\item Evaluación del sistema completo (30 h).
-	\item Ajustes y mejoras finales (25).
+	\item Ajustes y mejoras finales (25 h).
 	\item Almacenamiento de los modelos entrenados (10 h).
 	\end{enumerate}
 \item Documentación (110 h)
@@ -347,130 +350,44 @@ Cantidad total de horas: 600.
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior.
-
-Una herramienta simple para desarrollar los diagramas es el Draw.io (\url{https://app.diagrams.net/}).
-\href{https://app.diagrams.net}{Draw.io}
-
+En la figura 2 se observa el diagrama de \textit{Activity on Node} del proyecto. Las actividades relacionadas con el camino crítico, señaladas con flechas negras, implican 490 horas de trabajo.
 
 \begin{figure}[htpb]
-\centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\centering
+\includegraphics[width=.8\textwidth]{./Figuras/diagrama-aon.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semi críticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color.
-
-\end{consigna}
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
+En la figura 3 se presenta la tabla de Gantt, y en la figura 4 se presenta el diagrama de Gantt.
 
 \begin{figure}[htpb]
-  \begin{center}
-    \begin{ganttchart}[
-      time slot unit=day,
-      time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \end{ganttchart}
-  \end{center}
-  \caption{Diagrama de gantt de ejemplo}
-  \label{fig:gantt}
+\centering
+\includegraphics[width=.8\textwidth]{./Figuras/columna.png}
+\caption{Tabla de Gantt}
+\label{fig:AoN}
 \end{figure}
 
 
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
+\includegraphics[width=700px, height=.8\textheight]{./Figuras/image.png}
+\caption{Diagrama de Gantt.} %Modificar este título acorde.
 \label{fig:diagGantt}
 \end{figure}
 
 \end{landscape}
 
-\end{consigna}
-
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-Incluir la aclaración de si se emplea como moneda el peso argentino (ARS) o si se usa moneda extranjera (USD, EUR, etc). Si es en moneda extranjera se debe indicar la tasa de conversión respecto a la moneda local en una fecha dada.
-
-\end{consigna}
+A continuación se detallan los costos asociados al proyecto expresados en peso argentino (ARS):
 
 \begin{table}[htpb]
 \centering
@@ -483,24 +400,15 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
+\multicolumn{1}{|l|}{Horas de trabajo del responsable}
  &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
+  \multicolumn{1}{c|}{600 h} &
+  \multicolumn{1}{c|}{\$15.000} &
+  \multicolumn{1}{c|}{\$9.000.000} \\ \hline
    &
    \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$9.000.000} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
@@ -508,22 +416,19 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
+\multicolumn{1}{|l|}{Servicios públicos}
    &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
+  \multicolumn{1}{c|}{8 meses} &
+  \multicolumn{1}{c|}{\$40.000} &
+  \multicolumn{1}{c|}{\$320.000} \\ \hline
    &
    \\ \hline
+
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{\$320.000} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
+\multicolumn{1}{c|}{\$9.320.000}
    \\ \hline
 \end{tabularx}%
 \end{table}
