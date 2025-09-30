@@ -455,7 +455,7 @@ Riesgo 2: Bajo desempeño del sistema.
 \begin{itemize}
 	\item Severidad (S): 8.\\
 	Si durante el desarrollo del sistema no se logran alcanzar rendimientos aceptables, el valor del proyecto se verá comprometido.
-	\item Ocurrencia (O): 4.\\
+	\item Probabilidad de ocurrencia (O): 4.\\
 	Un ajuste incorrecto de los parámetros de los modelos, puede generar métricas de evaluación inferiores a las esperadas.
 \end{itemize}
 
@@ -463,7 +463,7 @@ Riesgo 3: Falta de conocimiento para implementar el proyecto.
 \begin{itemize}
 	\item Severidad (S):  6.\\
 	Algunas de las técnicas a utilizar en el proyecto, son temas que se dictan en materias avanzadas que forman parte de la maestría.
-	\item Ocurrencia (O): 2.\\
+	\item Probabilidad de ocurrencia (O): 2.\\
 	En la planificación se consideró el estudio de estos temas, pero el tiempo asignado puede no ser suficiente.
 \end{itemize}
 
@@ -471,7 +471,7 @@ Riesgo 4: Incumplimiento de las fechas estipuladas en el proyecto.
 \begin{itemize}
 	\item Severidad (S):  5.\\
 	Los retrasos que pueden surgir en cada etapa, van a afectar la finalización del proyecto en el tiempo establecido.
-	\item Ocurrencia (O): 4.\\
+	\item Probabilidad de ocurrencia (O): 4.\\
 	Dado que el proyecto se desarrolla como una propuesta personal, no se cuenta con disponibilidad dentro del horario laboral.
 \end{itemize}
 
@@ -479,7 +479,7 @@ Riesgo 5: Infraestructura deficiente para entrenar los modelos.
 \begin{itemize}
 	\item Severidad (S):  7.\\
 	Todo el desarrollo se realizará en una computadora personal, lo que podría prolongar los tiempos de entrenamiento y retrasar el comienzo de otras etapas.
-	\item Ocurrencia (O): 3.\\
+	\item Probabilidad de ocurrencia (O): 3.\\
 	Aunque se dispone de recursos computacionales de gama media, su capacidad podría no ser óptima para entrenar modelos avanzados.
 \end{itemize}
 
@@ -510,17 +510,17 @@ c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo
  
 Riesgo 1: se utilizarán múltiples fuentes de datos y, de ser necesario, se simularán datos para generar un \textit{dataset} representativo.
   \begin{itemize}
-	\item Severidad (S*): 9.
+	\item Severidad (S*): 9.\\
           La severidad se mantiene ya que los datos son críticos para el entrenamiento de los modelos.
-	\item Probabilidad de ocurrencia (O*): 2.
+	\item Probabilidad de ocurrencia (O*): 2.\\
           Al utilizar distintas fuentes y datos simulados, es menos probable que el riesgo se materialice.
 	\end{itemize}
 
 Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento. Por ejemplo, validación cruzada de los datos de entrenamiento o \textit{frameworks} optimizados para la búsqueda de los mejores hiperparámetros.
   \begin{itemize}
-	\item Severidad (S*): 7.
+	\item Severidad (S*): 7.\\
           La severidad disminuye muy poco porque el rendimiento del sistema es importante para demostrar la utilidad del proyecto.
-	\item Probabilidad de ocurrencia (O*): 3.
+	\item Probabilidad de ocurrencia (O*): 3.\\
           Las técnicas mencionadas ayudan a mejorar el sistema, pero aún así puede ser difícil de lograrlo.
 	\end{itemize}
 
