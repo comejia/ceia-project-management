@@ -439,31 +439,48 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+A continuación se identifican los principales riesgos del proyecto y se evalúa la severidad y probabilidad de ocurrencia de cada uno en una escala del 1 al 10, donde 10 es el valor más alto.
 
-Riesgo 2:
+a) Identificación de los riesgos y estimación de sus consecuencias:
+ 
+Riesgo 1: Datos insuficientes para entrenar los modelos.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 9.\\
+	Al no contar con datos reales provistos por una empresa, es necesario elaborar datos sintéticos. Por lo que se debe recurrir a \textit{datasets} públicos para entrenar los modelos.
+	\item Probabilidad de ocurrencia (O): 4.\\
+	Si bien existen fuentes públicas relacionados al tema de este proyecto, no todos pueden ser adecuados. 
 \end{itemize}
 
-Riesgo 3:
+Riesgo 2: Bajo desempeño del sistema.
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 8.\\
+	Si durante el desarrollo del sistema no se logran alcanzar rendimientos aceptables, el valor del proyecto se verá comprometido.
+	\item Ocurrencia (O): 4.\\
+	Un ajuste incorrecto de los parámetros de los modelos, puede generar métricas de evaluación inferiores a las esperadas.
+\end{itemize}
+
+Riesgo 3: Falta de conocimiento para implementar el proyecto.
+\begin{itemize}
+	\item Severidad (S):  6.\\
+	Algunas de las técnicas a utilizar en el proyecto, son temas que se dictan en materias avanzadas que forman parte de la maestría.
+	\item Ocurrencia (O): 2.\\
+	En la planificación se consideró el estudio de estos temas, pero el tiempo asignado puede no ser suficiente.
+\end{itemize}
+
+Riesgo 4: Incumplimiento de las fechas estipuladas en el proyecto.
+\begin{itemize}
+	\item Severidad (S):  5.\\
+	Los retrasos que pueden surgir en cada etapa, van a afectar la finalización del proyecto en el tiempo establecido.
+	\item Ocurrencia (O): 4.\\
+	Dado que el proyecto se desarrolla como una propuesta personal, no se cuenta con disponibilidad dentro del horario laboral.
+\end{itemize}
+
+Riesgo 5: Infraestructura deficiente para entrenar los modelos.
+\begin{itemize}
+	\item Severidad (S):  7.\\
+	Todo el desarrollo se realizará en una computadora personal, lo que podría prolongar los tiempos de entrenamiento y retrasar el comienzo de otras etapas.
+	\item Ocurrencia (O): 3.\\
+	Aunque se dispone de recursos computacionales de gama media, su capacidad podría no ser óptima para entrenar modelos avanzados.
 \end{itemize}
 
 
@@ -475,36 +492,37 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+Datos insuficientes para entrenar los modelos       & 9  & 4  &  36   &  9  &  2  & 18      \\ \hline
+Bajo desempeño del sistema       & 8  & 4  &  32   &  7  &  3  &  21    \\ \hline
+Falta de conocimiento para implementar el proyecto       & 6  & 2  &  12   &    &    &      \\ \hline
+Incumplimiento de las fechas estipuladas en el proyecto       & 5  & 4  &  20   &    &    &      \\ \hline
+Infraestructura deficiente para entrenar los modelos       & 7  & 3  &  21   &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 25.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+Riesgo 1: se utilizarán múltiples fuentes de datos y, de ser necesario, se simularán datos para generar un \textit{dataset} representativo.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+	\item Severidad (S*): 9.
+          La severidad se mantiene ya que los datos son críticos para el entrenamiento de los modelos.
+	\item Probabilidad de ocurrencia (O*): 2.
+          Al utilizar distintas fuentes y datos simulados, es menos probable que el riesgo se materialice.
 	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
+Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento. Por ejemplo, validación cruzada de los datos de entrenamiento o \textit{frameworks} optimizados para la búsqueda de los mejores hiperparámetros.
+  \begin{itemize}
+	\item Severidad (S*): 7.
+          La severidad disminuye muy poco porque el rendimiento del sistema es importante para demostrar la utilidad del proyecto.
+	\item Probabilidad de ocurrencia (O*): 3.
+          Las técnicas mencionadas ayudan a mejorar el sistema, pero aún así puede ser difícil de lograrlo.
+	\end{itemize}
 
 
 \section{14. Gestión de la calidad}
