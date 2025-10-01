@@ -65,7 +65,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 %		  En distintas líneas \newline
 %		  Así                                                    & {día} de {mes} de 202X \\ \hline
 3      & Se completa hasta el punto 12 inclusive                & {23} de {septiembre} de 2025 \\ \hline
-%4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
+4      & Se completa el plan	                                 & {30} de {septiembre} de 2025 \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -376,7 +376,9 @@ En la figura 3 se presenta la tabla de Gantt, y en la figura 4 se presenta el di
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=700px, height=.8\textheight]{./Figuras/image.png}
+%\includegraphics[width=1.5\textheight]{./Figuras/image5.png}
+\includegraphics[width=1.5\textwidth, height=\textheight]{./Figuras/image5.png}
+
 \caption{Diagrama de Gantt.} %Modificar este título acorde.
 \label{fig:diagGantt}
 \end{figure}
@@ -387,7 +389,7 @@ En la figura 3 se presenta la tabla de Gantt, y en la figura 4 se presenta el di
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-A continuación se detallan los costos asociados al proyecto expresados en peso argentino (ARS):
+A continuación se detallan los costos asociados al proyecto expresados en pesos argentino (ARS):
 
 \begin{table}[htpb]
 \centering
@@ -437,31 +439,48 @@ Descripción &
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
-\begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+A continuación se identifican los principales riesgos del proyecto y se evalúa la severidad y probabilidad de ocurrencia de cada uno en una escala del 1 al 10, donde 10 es el valor más alto.
 
-Riesgo 2:
+a) Identificación de los riesgos y estimación de sus consecuencias:
+ 
+Riesgo 1: Datos insuficientes para entrenar los modelos.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 9.\\
+	Al no contar con datos reales provistos por una empresa, es necesario elaborar datos sintéticos. Por lo que se debe recurrir a \textit{datasets} públicos para entrenar los modelos.
+	\item Probabilidad de ocurrencia (O): 4.\\
+	Si bien existen fuentes públicas relacionados al tema de este proyecto, no todos pueden ser adecuados. 
 \end{itemize}
 
-Riesgo 3:
+Riesgo 2: Bajo desempeño del sistema.
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 8.\\
+	Si durante el desarrollo del sistema no se logran alcanzar rendimientos aceptables, el valor del proyecto se verá comprometido.
+	\item Probabilidad de ocurrencia (O): 4.\\
+	Un ajuste incorrecto de los parámetros de los modelos, puede generar métricas de evaluación inferiores a las esperadas.
+\end{itemize}
+
+Riesgo 3: Falta de conocimiento para implementar el proyecto.
+\begin{itemize}
+	\item Severidad (S):  6.\\
+	Algunas de las técnicas a utilizar en el proyecto, son temas que se dictan en materias avanzadas que forman parte de la maestría.
+	\item Probabilidad de ocurrencia (O): 2.\\
+	En la planificación se consideró el estudio de estos temas, pero el tiempo asignado puede no ser suficiente.
+\end{itemize}
+
+Riesgo 4: Incumplimiento de las fechas estipuladas en el proyecto.
+\begin{itemize}
+	\item Severidad (S):  5.\\
+	Los retrasos que pueden surgir en cada etapa, van a afectar la finalización del proyecto en el tiempo establecido.
+	\item Probabilidad de ocurrencia (O): 4.\\
+	Dado que el proyecto se desarrolla como una propuesta personal, no se cuenta con disponibilidad dentro del horario laboral.
+\end{itemize}
+
+Riesgo 5: Infraestructura deficiente para entrenar los modelos.
+\begin{itemize}
+	\item Severidad (S):  7.\\
+	Todo el desarrollo se realizará en una computadora personal, lo que podría prolongar los tiempos de entrenamiento y retrasar el comienzo de otras etapas.
+	\item Probabilidad de ocurrencia (O): 3.\\
+	Aunque se dispone de recursos computacionales de gama media, su capacidad podría no ser óptima para entrenar modelos avanzados.
 \end{itemize}
 
 
@@ -473,77 +492,137 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+Datos insuficientes para entrenar los modelos       & 9  & 4  &  36   &  9  &  2  & 18      \\ \hline
+Bajo desempeño del sistema       & 8  & 4  &  32   &  7  &  3  &  21    \\ \hline
+Falta de conocimiento para implementar el proyecto       & 6  & 2  &  12   &    &    &      \\ \hline
+Incumplimiento de las fechas estipuladas en el proyecto       & 5  & 4  &  20   &    &    &      \\ \hline
+Infraestructura deficiente para entrenar los modelos       & 7  & 3  &  21   &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 25.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+Riesgo 1: se utilizarán múltiples fuentes de datos y, de ser necesario, se simularán datos para generar un \textit{dataset} representativo.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+	\item Severidad (S*): 9.\\
+          La severidad se mantiene ya que los datos son críticos para el entrenamiento de los modelos.
+	\item Probabilidad de ocurrencia (O*): 2.\\
+          Al utilizar distintas fuentes y datos simulados, es menos probable que el riesgo se materialice.
 	\end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
+Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento. Por ejemplo, validación cruzada de los datos de entrenamiento o \textit{frameworks} optimizados para la búsqueda de los mejores hiperparámetros.
+  \begin{itemize}
+	\item Severidad (S*): 7.\\
+          La severidad disminuye muy poco porque el rendimiento del sistema es importante para demostrar la utilidad del proyecto.
+	\item Probabilidad de ocurrencia (O*): 3.\\
+          Las técnicas mencionadas ayudan a mejorar el sistema, pero aún así puede ser difícil de lograrlo.
+	\end{itemize}
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Elija al menos diez requerimientos que a su criterio sean los más importantes/críticos/que aportan más valor y para cada uno de ellos indique las acciones de verificación y validación que permitan asegurar su cumplimiento.
 
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento con su correspondiente número.
+\item Req \#1.1: El sistema debe ser capaz de recomendar contenido personalizado al usuario.
 
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar.
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar. 
+	\item Verificación: se genera un perfil de consumo y se comprueba que el sistema devuelve un contenido relacionado.
+	\item Validación: se simula un escenario y el cliente validará si el contenido recomendado se ajusta a las preferencias. 
 \end{itemize}
 
 \end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  
+\begin{itemize} 
+\item Req \#1.2: El modelo secuencial debe procesar el \textit{dataset} de entrada y generar los \textit{embeddings}.
 
-Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  
+\begin{itemize}
+	\item Verificación: en base a un mismo dato de entrada, se debe generar el mismo \textit{embedding}.
+	\item Validación: el cliente podrá revisar que los \textit{embeddings} de contenidos similares tienen un coseno de similitud alto.
+\end{itemize}
 
-En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
+\end{itemize}
 
-\end{consigna}
+\begin{itemize} 
+\item Req \#1.3: El modelo de aprendizaje por refuerzo debe utilizar los \textit{embeddings} y actualizar su política de recomendación en función de las recompensas obtenidas.
+
+\begin{itemize}
+	\item Verificación: se integran pruebas que verifican si el agente actualiza la política de recomendación en función de las recompensas.
+	\item Validación: se muestra al cliente los \textit{logs} de como se ajusta la política de recomendación.
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize} 
+\item Req \#1.5: El sistema debe disponer de gráficos que faciliten la visualización del desempeño.
+
+\begin{itemize}
+	\item Verificación: comprobar que los gráficos muestran datos consistentes con los \textit{logs} del sistema.
+	\item Validación: confirmar con el cliente si las visualizaciones son relevantes.
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize} 
+\item Req \#2.1: Se deben incluir el informe de avance y la memoria del trabajo final.
+
+\begin{itemize}
+	\item Verificación: comprobar que los informes cumplen los puntos pedidos.
+	\item Validación: entregar la documentación al cliente para su revisión y recibir su conformidad.
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize} 
+\item Req \#2.2: El código fuente debe estar debidamente documentado.
+
+\begin{itemize}
+	\item Verificación: revisar que el código disponga de la documentación necesaria tanto para comprender las partes del sistema como la instalación y ejecución del mismo.
+	\item Validación: compartir el código con el cliente para su inspección.
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize} 
+\item Req \#3.1: Se deben utilizar conjuntos diferentes para el entrenamiento y evaluación del sistema.
+
+\begin{itemize}
+	\item Verificación: separar el \textit{dataset} en etapas tempranas del desarrollo, para evitar usar datos de evaluación en entrenamiento.
+	\item Validación: el cliente podrá validar si el modelo generaliza o no en la evaluación.
+\end{itemize}
+
+\end{itemize}
+
+\begin{itemize} 
+\item Req \#3.2: Se deben comparar los resultados contra métodos tradicionales.
+
+\begin{itemize}
+	\item Verificación: se evalúan los modelos mediante métricas definidas.
+	\item Validación: se presentan los resultados al cliente con gráficos.
+\end{itemize}
+
+\end{itemize}
+
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+A continuación, se presentan las pautas para el proceso de cierre del proyecto:
 
 \begin{itemize}
 	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
+	 - El alumno sera el responsable de verificar el cumplimiento del alcance del proyecto, los requerimientos establecidos y los principales entregables del proyecto. También, se evaluará el rendimiento de la solución.
 	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
+	 - El alumno será el encargado de documentar los problemas que surgieron durante el proceso así como las limitaciones encontradas. Y se identificarán que técnicas fueron útiles para el logro de los objetivos y cuales resultaron menos efectivas.
 	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	  - El acto de agradecimiento y los gastos correspondientes estarán a cargo del responsable del proyecto.
 \end{itemize}
 
-\end{consigna}
 
 \end{document}
