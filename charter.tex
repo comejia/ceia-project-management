@@ -377,7 +377,7 @@ En la figura 3 se presenta la tabla de Gantt, y en la figura 4 se presenta el di
 \begin{figure}[htpb]
 \centering 
 %\includegraphics[width=1.5\textheight]{./Figuras/image5.png}
-\includegraphics[width=1.5\textwidth, height=\textheight]{./Figuras/image5.png}
+\includegraphics[width=1.6\textwidth, height=\textheight]{./Figuras/image5.png}
 
 \caption{Diagrama de Gantt.} %Modificar este título acorde.
 \label{fig:diagGantt}
@@ -389,7 +389,7 @@ En la figura 3 se presenta la tabla de Gantt, y en la figura 4 se presenta el di
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-A continuación se detallan los costos asociados al proyecto expresados en pesos argentino (ARS):
+A continuación se detallan los costos asociados al proyecto expresados en pesos argentinos (ARS):
 
 \begin{table}[htpb]
 \centering
@@ -443,39 +443,39 @@ A continuación se identifican los principales riesgos del proyecto y se evalúa
 
 a) Identificación de los riesgos y estimación de sus consecuencias:
  
-Riesgo 1: Datos insuficientes para entrenar los modelos.
+Riesgo 1: datos insuficientes para entrenar los modelos.
 \begin{itemize}
 	\item Severidad (S): 9.\\
-	Al no contar con datos reales provistos por una empresa, es necesario elaborar datos sintéticos. Por lo que se debe recurrir a \textit{datasets} públicos para entrenar los modelos.
+	Al no contar con datos reales provistos por una empresa, es necesario elaborar datos sintéticos. Por lo que se debe recurrir a \textit{datasets} públicos los cuales pueden no ser suficientes para entrenar los modelos.
 	\item Probabilidad de ocurrencia (O): 4.\\
-	Si bien existen fuentes públicas relacionados al tema de este proyecto, no todos pueden ser adecuados. 
+	Si bien existen fuentes públicas relacionados al tema de este proyecto, no todos van a ser adecuados.
 \end{itemize}
 
-Riesgo 2: Bajo desempeño del sistema.
+Riesgo 2: bajo desempeño del sistema.
 \begin{itemize}
 	\item Severidad (S): 8.\\
 	Si durante el desarrollo del sistema no se logran alcanzar rendimientos aceptables, el valor del proyecto se verá comprometido.
 	\item Probabilidad de ocurrencia (O): 4.\\
-	Un ajuste incorrecto de los parámetros de los modelos, puede generar métricas de evaluación inferiores a las esperadas.
+	El desempeño del modelo depende de varios factores, algunos se pueden reducir desde el inicio del desarrollo pero otros son específicos de la arquitectura a implementar.
 \end{itemize}
 
-Riesgo 3: Falta de conocimiento para implementar el proyecto.
+Riesgo 3: falta de conocimiento para implementar el proyecto.
 \begin{itemize}
 	\item Severidad (S):  6.\\
-	Algunas de las técnicas a utilizar en el proyecto, son temas que se dictan en materias avanzadas que forman parte de la maestría.
+	Algunas de las técnicas a utilizar en el proyecto, son temas que se dictan en materias avanzadas que forman parte de la maestría. Esto puede ocasionar que la solución no cuente con las mejores técnicas.
 	\item Probabilidad de ocurrencia (O): 2.\\
 	En la planificación se consideró el estudio de estos temas, pero el tiempo asignado puede no ser suficiente.
 \end{itemize}
 
-Riesgo 4: Incumplimiento de las fechas estipuladas en el proyecto.
+Riesgo 4: incumplimiento de las fechas estipuladas en el proyecto.
 \begin{itemize}
 	\item Severidad (S):  5.\\
-	Los retrasos que pueden surgir en cada etapa, van a afectar la finalización del proyecto en el tiempo establecido.
+	Los retrasos que pueden surgir en cada etapa, afectarán la finalización del proyecto en el tiempo establecido.
 	\item Probabilidad de ocurrencia (O): 4.\\
 	Dado que el proyecto se desarrolla como una propuesta personal, no se cuenta con disponibilidad dentro del horario laboral.
 \end{itemize}
 
-Riesgo 5: Infraestructura deficiente para entrenar los modelos.
+Riesgo 5: infraestructura deficiente para entrenar los modelos.
 \begin{itemize}
 	\item Severidad (S):  7.\\
 	Todo el desarrollo se realizará en una computadora personal, lo que podría prolongar los tiempos de entrenamiento y retrasar el comienzo de otras etapas.
@@ -530,7 +530,7 @@ Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento.
 
 
 \begin{itemize} 
-\item Req \#1.1: El sistema debe ser capaz de recomendar contenido personalizado al usuario.
+\item Req \#1.1: el sistema debe ser capaz de recomendar contenido personalizado al usuario.
 
 \begin{itemize}
 	\item Verificación: se genera un perfil de consumo y se comprueba que el sistema devuelve un contenido relacionado.
@@ -540,7 +540,7 @@ Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento.
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#1.2: El modelo secuencial debe procesar el \textit{dataset} de entrada y generar los \textit{embeddings}.
+\item Req \#1.2: el modelo secuencial debe procesar el \textit{dataset} de entrada y generar los \textit{embeddings}.
 
 \begin{itemize}
 	\item Verificación: en base a un mismo dato de entrada, se debe generar el mismo \textit{embedding}.
@@ -550,17 +550,17 @@ Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento.
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#1.3: El modelo de aprendizaje por refuerzo debe utilizar los \textit{embeddings} y actualizar su política de recomendación en función de las recompensas obtenidas.
+\item Req \#1.3: el modelo de aprendizaje por refuerzo debe utilizar los \textit{embeddings} y actualizar su política de recomendación en función de las recompensas obtenidas.
 
 \begin{itemize}
 	\item Verificación: se integran pruebas que verifican si el agente actualiza la política de recomendación en función de las recompensas.
-	\item Validación: se muestra al cliente los \textit{logs} de como se ajusta la política de recomendación.
+	\item Validación: se muestra al cliente \textit{logs} de cómo se ajusta la política de recomendación.
 \end{itemize}
 
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#1.5: El sistema debe disponer de gráficos que faciliten la visualización del desempeño.
+\item Req \#1.5: el sistema debe disponer de gráficos que faciliten la visualización del desempeño.
 
 \begin{itemize}
 	\item Verificación: comprobar que los gráficos muestran datos consistentes con los \textit{logs} del sistema.
@@ -570,7 +570,7 @@ Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento.
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#2.1: Se deben incluir el informe de avance y la memoria del trabajo final.
+\item Req \#2.1: se deben incluir el informe de avance y la memoria del trabajo final.
 
 \begin{itemize}
 	\item Verificación: comprobar que los informes cumplen los puntos pedidos.
@@ -580,7 +580,7 @@ Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento.
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#2.2: El código fuente debe estar debidamente documentado.
+\item Req \#2.2: el código fuente debe estar debidamente documentado.
 
 \begin{itemize}
 	\item Verificación: revisar que el código disponga de la documentación necesaria tanto para comprender las partes del sistema como la instalación y ejecución del mismo.
@@ -590,7 +590,7 @@ Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento.
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#3.1: Se deben utilizar conjuntos diferentes para el entrenamiento y evaluación del sistema.
+\item Req \#3.1: se deben utilizar conjuntos diferentes para el entrenamiento y evaluación del sistema.
 
 \begin{itemize}
 	\item Verificación: separar el \textit{dataset} en etapas tempranas del desarrollo, para evitar usar datos de evaluación en entrenamiento.
@@ -600,7 +600,7 @@ Riesgo 2: se aplicarán distintas técnicas que permitan mejorar el rendimiento.
 \end{itemize}
 
 \begin{itemize} 
-\item Req \#3.2: Se deben comparar los resultados contra métodos tradicionales.
+\item Req \#3.2: se deben comparar los resultados contra métodos tradicionales.
 
 \begin{itemize}
 	\item Verificación: se evalúan los modelos mediante métricas definidas.
@@ -617,11 +617,9 @@ A continuación, se presentan las pautas para el proceso de cierre del proyecto:
 
 \begin{itemize}
 	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
-	 - El alumno sera el responsable de verificar el cumplimiento del alcance del proyecto, los requerimientos establecidos y los principales entregables del proyecto. También, se evaluará el rendimiento de la solución.
+	 - El alumno será el responsable de verificar el cumplimiento del alcance, los requerimientos establecidos y los principales entregables del proyecto. También se evaluará el rendimiento de la solución.
 	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, los problemas que surgieron y cómo se solucionaron:\\
-	 - El alumno será el encargado de documentar los problemas que surgieron durante el proceso así como las limitaciones encontradas. Y se identificarán que técnicas fueron útiles para el logro de los objetivos y cuales resultaron menos efectivas.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
-	  - El acto de agradecimiento y los gastos correspondientes estarán a cargo del responsable del proyecto.
+	 - El alumno será el encargado de documentar los problemas que surgieron durante el proceso así como las limitaciones encontradas. Se identificarán que técnicas fueron útiles para el logro de los objetivos y cuáles resultaron menos efectivas.
 \end{itemize}
 
 
